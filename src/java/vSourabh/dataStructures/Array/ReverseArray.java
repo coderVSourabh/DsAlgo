@@ -1,4 +1,4 @@
-package com.java.vSourabh.dataStructures.Array;
+package java.vSourabh.dataStructures.Array;
 
 public class ReverseArray {
 
