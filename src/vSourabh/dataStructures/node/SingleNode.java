@@ -5,6 +5,16 @@ public class SingleNode<T> implements Comparable<T> {
     
     private T value;
     private SingleNode<T> nextNode;
+    
+    public SingleNode() {
+    	super();
+    	nextNode = null;
+    }
+    
+    public SingleNode(T val) {
+    	this();
+    	this.value = val;
+    }
      
     public T getValue() {
         return value;

@@ -1,6 +1,3 @@
-/**
- * 
- */
 package vSourabh.dataStructures.graph;
 
 import java.util.Deque;
@@ -139,7 +136,6 @@ public class BinaryTree {
 		obj.levelOrder(obj.root);
 		
 		BinaryTree.preOrder(obj.root);
-
 
 	}
 

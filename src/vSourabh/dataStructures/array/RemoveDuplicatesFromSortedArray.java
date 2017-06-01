@@ -47,5 +47,11 @@ public class RemoveDuplicatesFromSortedArray {
 		System.out.print("\nSorted without Duplicate Array: ");
 		for (int i = 0; i < length; i++)
 			System.out.print(nums[i] + ", ");
+		
+		nums = new int[] {0,0,1,2,3,4,5,5,6,6,7};
+		length = obj.removeDuplicates(nums);
+		System.out.print("\nSorted without Duplicate Array: ");
+		for (int i = 0; i < length; i++)
+			System.out.print(nums[i] + ", ");
 	}
 }

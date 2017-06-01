@@ -53,22 +53,28 @@ public class MergeSort {
 	
 	/**
 	 * LeetCode
-	 * 	Merge 2 sorted arrays to one
-	 *  TODO: Size of Output should be adjusted
+	 * Merge 2 sorted arrays to one
+	 *  
 	 */
-	void merge(int A[], int m, int B[], int n) {
+	public int[] merge(int A[], int m, int B[], int n) {
         int i=m-1;
 		int j=n-1;
 		int k = m+n-1;
-		while(i >=0 && j>=0)
-		{
+		int[] arr = new int[k+1];
+		while(i >=0 && j>=0) {
 			if(A[i] > B[j])
-				A[k--] = A[i--];
+				arr[k--] = A[i--];
 			else
-				A[k--] = B[j--];
+				arr[k--] = B[j--];
 		}
+		
 		while(j>=0)
-			A[k--] = B[j--];
+			arr[k--] = B[j--];
+		
+		while(i>=0)
+			arr[k--] = A[i--];
+		
+		return arr;
     }
 	
 	/**
@@ -100,11 +106,12 @@ public class MergeSort {
 		mSort.mergeSort(arr, 0, arr.length -1);
 		ArrayUtills.printArray(arr);
 		
-		int[] arrA = new int[]{1,4,6,8,0,0,0,0};
+		int[] arrA = new int[]{1,4,6,8};
 		int arrB[] = new int[]{2,3,5,7};
-		mSort.merge(arrA, 4 ,arrB, 4);
+		int[] arrC = mSort.merge(arrA, 4 ,arrB, 4);
 		ArrayUtills.printArray(arrA);
 		ArrayUtills.printArray(arrB);
+		ArrayUtills.printArray(arrC);
 	}
 
 }

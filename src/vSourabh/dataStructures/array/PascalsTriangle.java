@@ -1,4 +1,4 @@
-package vSourabh.algo.greedy;
+package vSourabh.dataStructures.array;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,7 @@ public class PascalsTriangle {
 	public List<List<Integer>> generate(int numRows)
 	{
 		List<List<Integer>> allrows = new ArrayList<>();
-		ArrayList<Integer> row = new ArrayList<>();
+		List<Integer> row = new ArrayList<>();
 		for(int i=0;i<numRows;i++) {
 			row.add(0, 1);
 			for(int j=1;j<row.size()-1;j++)
@@ -38,6 +38,24 @@ public class PascalsTriangle {
 		return allrows;
 		
 	}
+	
+	public List<List<Integer>> generateTrianlge(int numRows) {
+        List<List<Integer>> triangle = new ArrayList<List<Integer>>();
+        if (numRows <=0)
+            return triangle;
+
+        for (int i=0; i<numRows; i++){
+            List<Integer> row =  new ArrayList<Integer>();
+            for (int j=0; j<i+1; j++){
+                if (j==0 || j==i)
+                    row.add(1);
+                else
+                    row.add(triangle.get(i-1).get(j-1)+triangle.get(i-1).get(j));
+            }
+            triangle.add(row);
+        }
+        return triangle;
+    }
 	
 	/**
 	 * 
@@ -55,15 +73,16 @@ public class PascalsTriangle {
 	public Vector<Integer> getRow(int rowIndex) {
         
 		Vector<Integer> vector = new Vector<>();
-        vector.add(0, 1);
-        for(int i=1; i<rowIndex+1; i++) {
-        	vector.add(i, 1);
-        	for(int j=i; j>=1; j--) {
-            	int tmp = vector.get(j - 1) + vector.get(j);
+		if(rowIndex < 0)
+        	return vector;
+		
+		for(int i=1; i<rowIndex+1; i++) {
+        	vector.add(0, 1);
+        	for(int j = 1; j < vector.size() - 1; j++) {
+            	int tmp = vector.get(j) + vector.get(j + 1);
     			vector.set(j, tmp);	
             }
         }
-        vector.add(1);
         return vector;
     }
 	
@@ -79,6 +98,12 @@ public class PascalsTriangle {
 			
 		}*/
 		// Same as above in lambda expression
+		result.forEach(p -> {
+			p.forEach(q -> System.out.print(q + " "));
+			System.out.print("\n"); 
+		});
+		
+		result =  pTriangle.generateTrianlge(4);
 		result.forEach(p -> {
 			p.forEach(q -> System.out.print(q + " "));
 			System.out.print("\n"); 

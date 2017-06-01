@@ -10,10 +10,73 @@ import java.util.Set;
 public class SubArraySumEqualsNum {
 	
 	/**
-	 * Given an array of integers and a number , find smallest 
-	 * sub-array with sum greater than the given value
+	 * 
+	 * LeetCode:
+	 * Given an array of n positive integers and a positive integer s, 
+	 * find the minimal length of a contiguous sub-array of which the 
+	 * sum >= s. If there isn't one, return 0 instead.
+	 * 
+	 * For example, given the array [2,3,1,2,4,3] and s = 7,
+	 * the sub-array [4,3] has the minimal length under the problem constraint.
+	 * Time Complexity : O(n)
 	 */
-	public int smallestSubArrayOfSumGreatherThanNum(int[] arr, int size, int num) {
+	public int minSubArrayLen(int s, int[] a) {
+		if (a == null || a.length == 0)
+			return 0;
+
+		int i = 0, j = 0, sum = 0, min = Integer.MAX_VALUE;
+
+		while (j < a.length) {
+			sum += a[j++];
+
+			while (sum >= s) {
+				min = Math.min(min, j - i);
+				sum -= a[i++];
+			}
+		}
+
+		return min == Integer.MAX_VALUE ? 0 : min;
+	}
+	
+	/**
+	 * LeetCode:
+	 * Given an array of n positive integers and a positive integer s, 
+	 * find the minimal length of a contiguous sub-array of which the 
+	 * sum >= s. If there isn't one, return 0 instead.
+	 * 
+	 * For example, given the array [2,3,1,2,4,3] and s = 7,
+	 * the sub-array [4,3] has the minimal length under the problem constraint.
+	 * Time Complexity : O(nLog(n))
+	 */
+	private int minSubArraySumLogN(int s, int[] nums) {
+		int[] sums = new int[nums.length + 1];
+		for (int i = 1; i < sums.length; i++) sums[i] = sums[i - 1] + nums[i - 1];
+		int minLen = Integer.MAX_VALUE;
+		for (int i = 0; i < sums.length; i++) {
+			int end = binarySearch(i + 1, sums.length - 1, sums[i] + s, sums);
+			if (end == sums.length) break;
+			if (end - i < minLen) minLen = end - i;
+		}
+		return minLen == Integer.MAX_VALUE ? 0 : minLen;
+	}
+
+	private int binarySearch(int lo, int hi, int key, int[] sums) {
+		while (lo <= hi) {
+			int mid = (lo + hi) / 2;
+			if (sums[mid] >= key){
+				hi = mid - 1;
+			} else {
+				lo = mid + 1;
+			}
+		}
+		return lo;
+	}
+	
+	/**
+	 * Given an array of integers and a number , find smallest 
+	 * sub-array with sum greater than equal to the given value
+	 */
+	public int minSizeSubArraySum(int[] arr, int size, int num) {
 
 		int sum = 0;
 		int l = 0;
@@ -22,12 +85,12 @@ public class SubArraySumEqualsNum {
 		int minSizeRight = Integer.MAX_VALUE;
 
 		for (int i = 0; i < size; i++) {
-			if (arr[i] > num) {
-				return 1;
-			}
+			if (arr[i] >= num) 
+				return 1; // Return if value >=  target
 			sum += arr[i];
 			while (sum > num && l <= i) {
 				if (i - l + 1 < minSize) {
+					
 					minSize = i - l + 1;
 					minSizeLeft = l;
 					minSizeRight = i;
@@ -163,8 +226,8 @@ public class SubArraySumEqualsNum {
 		
 		int[] arr = new int[]{ 1, 11, 100, 1, 0, 200, 3, 2, 35, 250 };
 		
-		System.out.println("\n************ Smallest SubArray Sum greater than k******************");
-		obj.smallestSubArrayOfSumGreatherThanNum(arr, arr.length, 280);
+		System.out.println("\n************ Smallest SubArray Sum greater than 280******************");
+		obj.minSizeSubArraySum(arr, arr.length, 280);
 		
 		System.out.println("\n************ Smallest SubArray Sum Equals to k******************");
 		obj.subArraysOfSumEqualsNum(arr, arr.length, 290);
@@ -174,12 +237,18 @@ public class SubArraySumEqualsNum {
 		System.out.println("\n************ Smallest SubArray Sum Equals to 0******************");
 		arr = new int[]{ 6, 2, 4, 3, -2, -2, -2, -1, -1, 3 };
 		boolean boolResult = obj.subArraysOfSumEqualsToZero(arr, arr.length);
-		System.out.println("***Result***" + boolResult);
+		System.out.println("***Result*** " + boolResult);
 		
 		arr = new int[] {1, 3, 4, 6, 7, 9};
 		int[] result = obj.twoSum(arr, 9);
 		System.out.println("the numbers are "+ arr[result[0]] + "," + arr[result[1]]);
+		
+		arr = new int[] {2,3,1,2,4,3};
+		int minVal = obj.minSubArrayLen(7, arr);
+		System.out.println("The Minimum Size Subarray Sum : " + minVal);
 	
+		minVal = obj.minSubArraySumLogN(7, arr);
+		System.out.println("The Minimum Size Subarray Sum : " + minVal);
 	}
 
 }

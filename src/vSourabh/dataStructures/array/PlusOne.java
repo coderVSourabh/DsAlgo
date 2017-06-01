@@ -19,6 +19,8 @@ public class PlusOne {
 
 	/**
 	 * 
+	 * LeetCode
+	 * 
 	 * Time Complexity : O(n)
 	 * Space Complexity: O(1)
 	 */
@@ -32,7 +34,8 @@ public class PlusOne {
 	        }   
 	        digits[i] = 0;
 	    }
-	    // Can return digits = new int[n + 1] old array can be GC
+	    // Can return digits = new int[n + 1] old array can be GC for better space Complexity
+	    
 	    int[] newNumber = new int [n+1];
 	    newNumber[0] = 1;    
 	    return newNumber;
@@ -47,6 +50,8 @@ public class PlusOne {
 		result = obj.plusOne(new int[] {9,9,9});
 		ArrayUtills.printArray(result);
 		
+		result = obj.plusOne(new int[] {1,1,9});
+		ArrayUtills.printArray(result);
 	}
 
 }

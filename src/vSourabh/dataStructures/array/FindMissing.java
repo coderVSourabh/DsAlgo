@@ -50,6 +50,28 @@ public class FindMissing {
 			 total -= arr[i];
 		 return total;
 	}
+	
+	
+	/**
+	 * LeetCode:
+	 * 
+	 * Given an array containing n distinct numbers 
+	 * taken from 0, 1, 2, ..., n, 
+	 * find the one that is missing from the array.
+	 * 
+	 * Given nums = [0, 1, 3] return 2.
+	 * 
+	 * Time Complexity : O(n)
+	 * Space Complexity: O(1)
+	 */
+	public static int missingNumber(int[] nums) {
+
+	    int xor = 0, i = 0;
+		for (i = 0; i < nums.length; i++) {
+			xor = xor ^ i ^ nums[i];
+		}
+		return xor ^ i;
+	}
 
 	/**
 	 * Time Complexity : O(n)
@@ -186,5 +208,8 @@ public class FindMissing {
 		
 		missed = findMissing(arrA);
 		System.out.println("The missing element is " + missed);		
+		
+		missed = missingNumber(new int[] {0,1,2,4,5,6});
+		System.out.println("The missing number is " + missed);		
 	}
 }
