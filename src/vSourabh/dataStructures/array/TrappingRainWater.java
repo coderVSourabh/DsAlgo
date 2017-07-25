@@ -1,4 +1,4 @@
-package vSourabh.dataStructures.array;
+package vsourabh.datastructures.array;
 
 /**
  * @author Sourabh
@@ -36,7 +36,6 @@ public class TrappingRainWater {
 	 *  we filled the whole container.
 	 * 
 	 */
-
 	public int trap(int A[], int n) {
 		int left=0; int right=n-1;
 		int res=0;
@@ -56,8 +55,13 @@ public class TrappingRainWater {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int arr[] = new int[] {0,1,0,2,1,0,1,3,2,1,2,1};
+		TrappingRainWater obj = new TrappingRainWater();
+		int result = obj.trap(arr, arr.length);
+		System.out.println("The water trapped blocks count is " + result);
+		
+		result = obj.trap(new int[] {1,0,2,1,0,1,2,5,0}, 9);
+		System.out.println("The water trapped blocks count is " + result);
 	}
 
 }

@@ -1,4 +1,4 @@
-package vSourabh.designPatterns.creational;
+package vsourabh.designpatterns.creational;
 
 /**
  * Creational pattern

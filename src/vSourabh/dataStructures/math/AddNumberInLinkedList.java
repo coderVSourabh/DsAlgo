@@ -1,6 +1,6 @@
-package vSourabh.dataStructures.math;
+package vsourabh.datastructures.math;
 
-import vSourabh.dataStructures.node.SingleNode;
+import vsourabh.datastructures.node.SingleNode;
 
 /**
  * @author Sourabh

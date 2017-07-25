@@ -1,4 +1,4 @@
-package vSourabh.designPatterns.behavioral;
+package vsourabh.designpatterns.behavioral;
 
 import java.util.ArrayList;
 import java.util.List;

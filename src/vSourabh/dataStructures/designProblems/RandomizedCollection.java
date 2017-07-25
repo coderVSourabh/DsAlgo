@@ -1,4 +1,4 @@
-package vSourabh.dataStructures.designProblems;
+package vsourabh.datastructures.designproblems;
 
 import java.util.ArrayList;
 import java.util.HashMap;

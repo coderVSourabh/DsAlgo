@@ -1,10 +1,10 @@
-package vSourabh.dataStructures.array;
+package vsourabh.datastructures.array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import vSourabh.dataStructures.utils.ArrayUtills;
+import vsourabh.datastructures.utils.ArrayUtills;
 
 /**
  * @author Sourabh

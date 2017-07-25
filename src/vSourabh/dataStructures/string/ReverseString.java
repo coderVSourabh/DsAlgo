@@ -1,6 +1,6 @@
-package vSourabh.dataStructures.string;
+package vsourabh.datastructures.string;
 
-import vSourabh.dataStructures.utils.ArrayUtills;
+import vsourabh.datastructures.utils.ArrayUtills;
 
 /**
  * @author Sourabh

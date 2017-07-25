@@ -1,4 +1,4 @@
-package vSourabh.dataStructures.node;
+package vsourabh.datastructures.node;
 
 
 public class SingleNode<T> implements Comparable<T> {

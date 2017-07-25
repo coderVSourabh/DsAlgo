@@ -1,9 +1,9 @@
-package vSourabh.dataStructures.string;
+package vsourabh.datastructures.string;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import vSourabh.dataStructures.utils.ArrayUtills;
+import vsourabh.datastructures.utils.ArrayUtills;
 
 /**
  * @author Sourabh

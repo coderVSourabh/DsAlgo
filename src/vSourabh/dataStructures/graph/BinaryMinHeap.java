@@ -1,7 +1,7 @@
 /**
  * 
  */
-package vSourabh.dataStructures.graph;
+package vsourabh.datastructures.graph;
 
 import java.util.ArrayList;
 import java.util.HashMap;

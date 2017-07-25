@@ -1,4 +1,4 @@
-package vSourabh.dataStructures.hashTable;
+package vsourabh.datastructures.hashtable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import vSourabh.dataStructures.utils.ArrayUtills;
+import vsourabh.datastructures.utils.ArrayUtills;
 
 /**
  * @author Sourabh

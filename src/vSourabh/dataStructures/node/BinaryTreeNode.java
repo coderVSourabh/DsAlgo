@@ -1,7 +1,7 @@
 /**
  * 
  */
-package vSourabh.dataStructures.node;
+package vsourabh.datastructures.node;
 
 /**
  * @author Sourabh

@@ -1,4 +1,4 @@
-package vSourabh.dataStructures.math;
+package vsourabh.datastructures.math;
 
 import java.util.HashMap;
 import java.util.Map;

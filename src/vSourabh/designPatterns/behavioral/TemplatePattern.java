@@ -1,4 +1,4 @@
-package vSourabh.designPatterns.behavioral;
+package vsourabh.designpatterns.behavioral;
 
 /**
  * Behavioural  design pattern

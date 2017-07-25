@@ -1,4 +1,4 @@
-package vSourabh.designPatterns.structural;
+package vsourabh.designpatterns.structural;
 
 import java.util.ArrayList;
 import java.util.List;

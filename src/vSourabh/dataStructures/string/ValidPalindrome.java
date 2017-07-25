@@ -1,4 +1,4 @@
-package vSourabh.dataStructures.string;
+package vsourabh.datastructures.string;
 
 /**
  * @author Sourabh
@@ -43,18 +43,43 @@ public class ValidPalindrome {
 		return true;
 	}
 	
+	public boolean isPalindrome2(String s) {
+		if (s == null || s.isEmpty()) 
+			return true;
+		
+		char in[] = s.toCharArray();
+		int head = 0, tail = in.length - 1;
+
+		while(head <= tail) {
+			if (in[head] != in[tail]) 
+				return false;
+			head++;
+			tail--;			
+		}
+		return true;
+	}
+	
 	public static void main(String[] args) {
 		ValidPalindrome obj = new ValidPalindrome();
 		boolean result;
 		
 		result = obj.isPalindrome("abc cba");
-		System.out.println("Palindrome : " + result);
+		System.out.println("Palindrome1 : " + result);
 		
 		result = obj.isPalindrome("A man, a plan, a canal: Panama");
-		System.out.println("Palindrome : " + result);
+		System.out.println("Palindrome2 : " + result);
 		
 		result = obj.isPalindrome("racing F1");
-		System.out.println("Palindrome : " + result);
+		System.out.println("Palindrome3 : " + result);
+		
+		result = obj.isPalindrome2(null);
+		System.out.println("Palindrome4 : " + result);
+		
+		result = obj.isPalindrome2("aabbbcccccbbbaa");
+		System.out.println("Palindrome5 : " + result);
+		
+		result = obj.isPalindrome2("A man, a pl, a canal: Panama");
+		System.out.println("Palindrome6 : " + result);
 	}
 
 }

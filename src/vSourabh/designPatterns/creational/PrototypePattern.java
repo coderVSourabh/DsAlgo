@@ -1,4 +1,4 @@
-package vSourabh.designPatterns.creational;
+package vsourabh.designpatterns.creational;
 
 import java.util.ArrayList;
 import java.util.Hashtable;

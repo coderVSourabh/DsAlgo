@@ -1,7 +1,7 @@
 /**
  * 
  */
-package vSourabh.algo.greedy;
+package vsourabh.algo.greedy;
 
 import java.util.ArrayList;
 import java.util.Collections;

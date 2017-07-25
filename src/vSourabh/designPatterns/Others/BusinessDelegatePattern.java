@@ -1,4 +1,4 @@
-package vSourabh.designPatterns.Others;
+package vsourabh.designpatterns.Others;
 
 /**
  * @author Sourabh

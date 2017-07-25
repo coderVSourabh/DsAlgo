@@ -1,7 +1,7 @@
-package vSourabh.dataStructures.linkedList;
+package vsourabh.datastructures.linkedlist;
 
-import vSourabh.dataStructures.node.DoubleNode;
-import vSourabh.dataStructures.node.SingleNode;
+import vsourabh.datastructures.node.DoubleNode;
+import vsourabh.datastructures.node.SingleNode;
 
 /**
  * @author Sourabh

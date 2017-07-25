@@ -1,6 +1,6 @@
-package vSourabh.dataStructures.designProblems;
+package vsourabh.datastructures.designproblems;
 
-import vSourabh.dataStructures.utils.ArrayUtills;
+import vsourabh.datastructures.utils.ArrayUtills;
 
 /**
  * @author Sourabh

@@ -1,4 +1,4 @@
-package vSourabh.dataStructures.hashTable;
+package vsourabh.datastructures.hashtable;
 
 import java.util.HashMap;
 import java.util.Map;

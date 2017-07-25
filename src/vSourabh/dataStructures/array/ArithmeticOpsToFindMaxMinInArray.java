@@ -1,8 +1,8 @@
-package vSourabh.dataStructures.array;
+package vsourabh.datastructures.array;
 
 import java.util.Stack;
 
-import vSourabh.algo.sorting.QuickSort;
+import vsourabh.algo.sorting.QuickSort;
 
 /**
  * @author Sourabh

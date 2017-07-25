@@ -1,4 +1,4 @@
-package vSourabh.dataStructures.array;
+package vsourabh.datastructures.array;
 
 /**
  * @author Sourabh

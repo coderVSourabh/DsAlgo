@@ -1,4 +1,4 @@
-package vSourabh.dataStructures.array;
+package vsourabh.datastructures.array;
 
 
 import java.util.Arrays;
@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
-import vSourabh.algo.sorting.QuickSort;
+import vsourabh.algo.sorting.QuickSort;
 
 
 /**

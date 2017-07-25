@@ -1,4 +1,4 @@
-package vSourabh.dataStructures.node;
+package vsourabh.datastructures.node;
 
 public class DoubleNode<T> implements Comparable<T> {
 	

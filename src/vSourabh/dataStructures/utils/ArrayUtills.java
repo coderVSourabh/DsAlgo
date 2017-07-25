@@ -1,4 +1,6 @@
-package vSourabh.dataStructures.utils;
+package vsourabh.datastructures.utils;
+
+import java.util.Arrays;
 
 /**
  * @author Sourabh
@@ -65,6 +67,13 @@ public class ArrayUtills {
 		}
 	}
 	
+	/** Printing the integer 2D array elements */
+	public static void printArray(int[][] arr) {
+		for(int []row : arr)
+			System.out.print(Arrays.toString(row));
+		System.out.print("\n");
+	}
+
 	/**
 	 * Swap the element in the original Array 
 	 * as reference object is passed

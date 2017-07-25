@@ -1,4 +1,4 @@
-package vSourabh.dataStructures.graph;
+package vsourabh.datastructures.graph;
 
 import java.util.HashMap;
 import java.util.HashSet;

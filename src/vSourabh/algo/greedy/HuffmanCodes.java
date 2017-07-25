@@ -1,11 +1,11 @@
 /**
  * 
  */
-package vSourabh.algo.greedy;
+package vsourabh.algo.greedy;
 
-import vSourabh.dataStructures.graph.BinaryMinHeap;
-import vSourabh.dataStructures.graph.BinaryTree;
-import vSourabh.dataStructures.node.BinaryTreeNode;
+import vsourabh.datastructures.graph.BinaryMinHeap;
+import vsourabh.datastructures.graph.BinaryTree;
+import vsourabh.datastructures.node.BinaryTreeNode;
 
 /**
  * @author Sourabh

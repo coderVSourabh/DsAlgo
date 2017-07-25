@@ -1,6 +1,6 @@
-package vSourabh.algo.sorting;
+package vsourabh.algo.sorting;
 
-import vSourabh.dataStructures.utils.ArrayUtills;
+import vsourabh.datastructures.utils.ArrayUtills;
 
 /**
  * @author Sourabh

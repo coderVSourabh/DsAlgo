@@ -1,9 +1,9 @@
-package vSourabh.dataStructures.graph;
+package vsourabh.datastructures.graph;
 
 import java.util.Deque;
 import java.util.LinkedList;
 
-import vSourabh.dataStructures.node.BinaryTreeNode;
+import vsourabh.datastructures.node.BinaryTreeNode;
 
 /**
  * @author Sourabh
