@@ -21,7 +21,7 @@ package vsourabh.datastructures.math;
  * For the purpose of this problem, assume that your function 
  * returns 0 when the reversed integer overflows.
  */
-public class ReverseNumber {
+public class ReverseNumber__7 {
 
 	/**
 	 * LeetCode:
@@ -30,27 +30,25 @@ public class ReverseNumber {
 	 * No flags needed. No hard code like 0xf7777777 needed.
 	 */
 	public int reverse(int x) {
-	    int result = 0;
+		int result = 0;
 
-	    while (x != 0) {
-	        int tail = x % 10;
-	        int newResult = result * 10 + tail;
-	        if ((newResult - tail) / 10 != result)
-	        return 0;
-	        result = newResult;
-	        x = x / 10;
-	    }
-
-	    return result;
+		while (x != 0) {
+			int tail = x % 10;
+			int newResult = result * 10 + tail;
+			if ((newResult - tail) / 10 != result)
+				return 0;
+			result = newResult;
+			x = x / 10;
+		}
+		return result;
 	}
-	
+
 	public static void main(String[] args) {
-		ReverseNumber rNum = new ReverseNumber();
+
+		ReverseNumber__7 rNum = new ReverseNumber__7();
 		int result = rNum.reverse(123);
-		System.out.println("The reverse number is " + result);
-	
+ 
 		result = rNum.reverse(-321);
 		System.out.println("The reverse number is " + result);
 	}
-
 }

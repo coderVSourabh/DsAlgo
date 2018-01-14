@@ -20,6 +20,25 @@ public class ImplementStrStr {
 			}
 		}
 	}
+	
+	public int StrImpl(String hay, String search) {
+		int j = 0;
+		char ch[] = search.toCharArray();
+		
+		for(int i = 0; ; i++) {
+			
+			if(ch[j] == hay.charAt(i)){
+				if (j == ch.length - 1)
+					return i - 1;
+				j++;
+				continue;
+			}
+			j = 0;
+			if (i + ch.length == hay.length()) return -1;
+				
+		}
+		
+	}
 
 	public static void main(String[] args) {
 		
@@ -28,7 +47,11 @@ public class ImplementStrStr {
 		int index = obj.strStr("This is a very big String", "big");
 		System.out.println("The index is : " + index);
 
-		index = obj.strStr("This is a very big String", "biig");
+		index = obj.strStr("This is a very big String", "Strinnnng");
+		System.out.println("The index is : " + index);
+		
+
+		index = obj.StrImpl("This is a very big String", "big");
 		System.out.println("The index is : " + index);
 	}
 }
