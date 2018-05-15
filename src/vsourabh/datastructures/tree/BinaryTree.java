@@ -1,4 +1,4 @@
-package vsourabh.datastructures.graph;
+package vsourabh.datastructures.tree;
 
 import java.util.Deque;
 import java.util.LinkedList;

@@ -14,9 +14,8 @@ public class UglyNumber {
 	 * Note that 1 is typically treated as an ugly number.
 	 */
 	public boolean isUglyNum(int num) {	
-		// for (int i=2; i<6 && num>0; i--) {
+
 		for (int i=5; i>=2 && num>0; i--) {
-		    //(num%2==0) (num%3==0) (num%5==0) Operations
 			while (num % i == 0) 
 		        num /= i;
 		}

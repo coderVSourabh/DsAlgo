@@ -13,7 +13,7 @@ package vsourabh.datastructures.array;
  * Given word1 = “coding”, word2 = “practice”, return 3.
  * Given word1 = "makes", word2 = "coding", return 1.
  */
-public class ShortestWordLength {
+public class ShortestWordDistance {
 
 	public int shortestDistance(String[] words, String word1, String word2) {
 	    int p1 = -1, p2 = -1, min = Integer.MAX_VALUE;
@@ -34,7 +34,7 @@ public class ShortestWordLength {
 
 	public static void main(String[] args) {
 		String[] words = {"practice", "makes", "perfect", "coding", "makes"};
-		ShortestWordLength obj = new ShortestWordLength();
+		ShortestWordDistance obj = new ShortestWordDistance();
 		int result = obj.shortestDistance(words, "coding", "practice");
 		
 		System.out.println("Shotrest Word is in index" + result + " : " + words[result]);

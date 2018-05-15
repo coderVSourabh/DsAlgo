@@ -34,6 +34,19 @@ public class LengthOfLastWord {
 	    return s.trim().length()-s.trim().lastIndexOf(" ") - 1;
 	}
 	
+	public int lengthOfLastWord2(String s) {
+		if(s == null)
+			return 0;
+		char ch[] = s.toCharArray();
+		int res = 0, len = ch.length - 1;
+		while(len >= 0 && ch[len] == ' ') len--;
+		while(len >= 0 && ch[len] != ' ') {
+			++res;
+			len--;
+		}
+		return res;
+	}
+	
 	public static void main(String[] args) {
 		LengthOfLastWord obj = new LengthOfLastWord();
 		int result = obj.lengthOfLastWordUsingTrim("Hello World");
@@ -43,6 +56,9 @@ public class LengthOfLastWord {
 		System.out.println("Length of Last word is " + result);
 		
 		result = obj.lengthOfLstWord(null);
+		System.out.println("Length of Last word is " + result);
+		
+		result = obj.lengthOfLastWord2("Hello World   ");
 		System.out.println("Length of Last word is " + result);
 	}
 }

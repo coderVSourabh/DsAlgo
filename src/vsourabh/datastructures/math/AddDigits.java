@@ -26,12 +26,31 @@ public class AddDigits {
 	 */
 	public int addDigits(int num) {
 		return 1 + (num - 1) % 9;
-        
     }
+	
+	public int addDigits2(int num) {
+		if(num == 0) return 0;
+		return num % 9 == 0 ? 9 : num % 9;
+	}
 	public static void main(String[] args) {
 		AddDigits digit = new AddDigits();
 		int result = digit.addDigits(99);
 		System.out.println("The addition of digit 99 is " + result);
+		
+		result = digit.addDigits2(99);
+		System.out.println("The addition of digit 99 is " + result);
+		
+		result = digit.addDigits(289);
+		System.out.println("The addition of digit 289 is " + result);
+
+		result = digit.addDigits2(289);
+		System.out.println("The addition of digit 289 is " + result);
+		
+		result = digit.addDigits(38);
+		System.out.println("The addition of digit 38 is " + result);
+		
+		result = digit.addDigits2(38);
+		System.out.println("The addition of digit 38 is " + result);
 	}
 
 }

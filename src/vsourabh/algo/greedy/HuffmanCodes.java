@@ -4,8 +4,8 @@
 package vsourabh.algo.greedy;
 
 import vsourabh.datastructures.graph.BinaryMinHeap;
-import vsourabh.datastructures.graph.BinaryTree;
 import vsourabh.datastructures.node.BinaryTreeNode;
+import vsourabh.datastructures.tree.BinaryTree;
 
 /**
  * @author Sourabh

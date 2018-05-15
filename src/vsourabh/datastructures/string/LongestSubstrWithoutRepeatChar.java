@@ -30,9 +30,11 @@ public class LongestSubstrWithoutRepeatChar {
         if (s.length()==0) return 0;
         Map<Character, Integer> map = new HashMap<>();	
         int max=0;
-        for (int i=0, j=0; i<s.length(); ++i){
-            if (map.containsKey(s.charAt(i))){
-                j = Math.max(j,map.get(s.charAt(i))+1);
+        // j is for the length of substring
+        for (int i=0, j=0; i<s.length(); ++i) {
+            if (map.containsKey(s.charAt(i))) {
+                j = Math.max(j,map.get(s.charAt(i))+1); // If repeat character is less than the substring 
+                										//adbccb in this case second b will reduce the j, hence Math.max
             }
             map.put(s.charAt(i),i);
             max = Math.max(max,i-j+1);
@@ -43,6 +45,12 @@ public class LongestSubstrWithoutRepeatChar {
 	public static void main(String[] args) {
 		LongestSubstrWithoutRepeatChar obj = new LongestSubstrWithoutRepeatChar();
 		int result = obj.lengthOfLongestSubstring("ababcdefba");
+		System.out.println("The length of Substring is " + result);
+		
+		result = obj.lengthOfLongestSubstring("pwwkews");
+		System.out.println("The length of Substring is " + result);
+		
+		result = obj.lengthOfLongestSubstring("adbccba");
 		System.out.println("The length of Substring is " + result);
 	}
 }

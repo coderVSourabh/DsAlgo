@@ -3,7 +3,7 @@ package vsourabh.datastructures.array;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TwoSum__1 {
+public class TwoSum {
 
 	public static int[] twoSum(int[] nums, int target) {
 

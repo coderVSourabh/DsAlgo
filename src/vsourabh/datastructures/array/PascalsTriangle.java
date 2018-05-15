@@ -70,11 +70,11 @@ public class PascalsTriangle {
 	 * Vector is synchronized
 	 */
 	public Vector<Integer> getRow(int rowIndex) {
-        
+
 		Vector<Integer> vector = new Vector<>();
 		if(rowIndex < 0)
         	return vector;
-		
+
 		for(int i=1; i<rowIndex+1; i++) {
         	vector.add(0, 1);
         	for(int j = 1; j < vector.size() - 1; j++) {
@@ -85,7 +85,7 @@ public class PascalsTriangle {
         return vector;
     }
 	
-	
+
 	public static void main(String[] args) {
 		PascalsTriangle pTriangle = new PascalsTriangle();
 		List<List<Integer>> result =  pTriangle.generate(6);

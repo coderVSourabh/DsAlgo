@@ -39,7 +39,6 @@ public class ValidPalindrome {
 				tail--;
 			}
 		}
-
 		return true;
 	}
 	
@@ -65,6 +64,9 @@ public class ValidPalindrome {
 		
 		result = obj.isPalindrome("abc cba");
 		System.out.println("Palindrome1 : " + result);
+		
+		result = obj.isPalindrome("abcba");
+		System.out.println("Palindrome1A : " + result);
 		
 		result = obj.isPalindrome("A man, a plan, a canal: Panama");
 		System.out.println("Palindrome2 : " + result);

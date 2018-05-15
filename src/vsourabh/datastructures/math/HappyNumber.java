@@ -77,5 +77,8 @@ public class HappyNumber {
 
 		result = hNum.isHappyUsingSet(82);
 		System.out.println("The Happy Number is "+ result);
+		
+		result = hNum.isHappy(81);
+		System.out.println("The Happy Number is "+ result);
 	}
 }
