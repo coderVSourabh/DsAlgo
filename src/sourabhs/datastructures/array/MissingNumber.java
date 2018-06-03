@@ -12,7 +12,7 @@ import sourabhs.datastructures.utils.ArrayUtills;
  *  	array on integers 1 to n
  *
  */
-public class FindMissing {
+public class MissingNumber {
 	
 	
 	/**

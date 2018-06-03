@@ -37,5 +37,8 @@ public class FlipGame {
 		FlipGame obj = new FlipGame();
 		List<String> list =  obj.generatePossibleNextMoves("++++");
 		list.forEach(p -> System.out.println(p + " "));
+		System.out.println("++++++++++++++++++++++++++=");
+		list =  obj.generatePossibleNextMoves("+--+");
+		list.forEach(p -> System.out.println(p + " "));
 	}
 }
