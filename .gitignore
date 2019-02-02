@@ -49,6 +49,7 @@ Temporary Items
 .idea
 .metadata
 bin/**
+out/**
 tmp/**
 tmp/**/*
 *.tmp

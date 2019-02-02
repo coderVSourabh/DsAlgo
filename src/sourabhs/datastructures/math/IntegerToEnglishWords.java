@@ -29,6 +29,9 @@ public class IntegerToEnglishWords {
 	
 	private final String[] THOUSANDS = {"", "Thousand", "Million", "Billion"};
 
+	/**
+	 * Time Complexity: O(n), where n ir the number of digits in the given integer.
+	 */
 	public String numberToWords(int num) {
 	    if (num == 0) return "Zero";
 
@@ -37,7 +40,7 @@ public class IntegerToEnglishWords {
 	    
 	    while (num > 0) {
 	        if (num % 1000 != 0)
-	    	    words = helper(num % 1000) +THOUSANDS[i] + " " + words;
+	    	    words = helper(num % 1000) + THOUSANDS[i] + " " + words;
 	    	num /= 1000;
 	    	i++;
 	    }
@@ -59,6 +62,12 @@ public class IntegerToEnglishWords {
 	public static void main(String[] args) {
 		IntegerToEnglishWords obj = new IntegerToEnglishWords();
 		String result = obj.numberToWords(123);
-		System.out.println("The number is " + result);
+		System.out.println("123: " + result);
+		System.out.println("=====================");
+		result = obj.numberToWords(123000);
+		System.out.println("123000: " + result);
+		System.out.println("=====================");
+		result = obj.numberToWords(1000);
+		System.out.println("1000: " + result);
 	}
 }
