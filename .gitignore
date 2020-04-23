@@ -1,4 +1,4 @@
-# Windows Installer files
+	# Windows Installer files
 *.cab
 *.msi
 *.msm
@@ -43,13 +43,28 @@ Temporary Items
 *.ear
 *.class
 *.lst
+.vscode
 
-*.pydevproject
+# STS 
+.apt_generated
+.classpath
+.factorypath
 .project
+.settings
+.springBeans
+
+
+# IntelliJ IDEA 
+out
 .idea
+*.iws
+*.iml
+*.ipr
+
+.gradle
+*.pydevproject
 .metadata
 bin/**
-out/**
 tmp/**
 tmp/**/*
 *.tmp
@@ -57,7 +72,5 @@ tmp/**/*
 *.swp
 *~.nib
 local.properties
-.classpath
-.settings/
 .loadpath
 _config.yml

@@ -24,7 +24,7 @@ public class AddBinaryNumber {
             sb.append(sum % 2);
             carry = sum / 2;
         }
-        
+                                        
         if (carry != 0) 
         	sb.append(carry);
         

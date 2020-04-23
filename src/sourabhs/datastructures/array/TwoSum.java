@@ -49,8 +49,7 @@ public class TwoSum {
 	}
 
 	public static void main(String args[]) {
-		
-		
+
 		int res[] = twoSum(new int[] {2,5,7,9,11}, 12);
 		System.out.println("Two Sum Number index: " + res[0] + " & " + res[1]);
 		
@@ -62,7 +61,8 @@ public class TwoSum {
 		
 		res = twoSumTwoPass(new int[]{1,2,4,6,8,9}, 7);
 		System.out.println("Two Sum Number index: " + res[0] + " & " + res[1]);
-		
-	}
 
+		res = twoSum(new int[]{-1,2,4,-6,8,-9}, -7);
+		System.out.println("Two Sum Number index: " + res[0] + " & " + res[1]);
+	}
 }
